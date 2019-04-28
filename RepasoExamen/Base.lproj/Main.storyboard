@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kuh-gH-LXy">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ColorViewController" customModule="RepasoExamen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Hlq-gN-4th">
+                                <rect key="frame" x="163" y="318" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="toggleSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="daQ-Q8-xEM"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Vat-S9-5IF"/>
+                    <connections>
+                        <outlet property="colorSwitch" destination="Hlq-gN-4th" id="lt2-CD-0iY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="92"/>
+        </scene>
+        <!--Title View Controller-->
+        <scene sceneID="b3g-pq-aWr">
+            <objects>
+                <viewController id="L64-BY-Vh0" customClass="TitleViewController" customModule="RepasoExamen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BmM-OP-r6B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0rY-px-gz3">
+                                <rect key="frame" x="164" y="318" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="7PJ-Te-kML" kind="show" id="76H-0q-7ot"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1cO-GB-0HM">
+                                <rect key="frame" x="18" y="259" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="fh6-bE-tu3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="58p-kp-ZR2"/>
+                    <connections>
+                        <outlet property="titleTextField" destination="1cO-GB-0HM" id="FEu-36-B6b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F4U-lr-zB9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="952.79999999999995" y="839.73013493253382"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ldm-Es-MQT">
+            <objects>
+                <viewController id="7PJ-Te-kML" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4XA-c3-7JB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="vZz-1c-OSS"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ye1-Ib-n1i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="950" y="1563"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="7K8-ks-avy">
+            <objects>
+                <viewController id="f82-4U-dAc" customClass="ImageViewController" customModule="RepasoExamen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="49T-vv-QCc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E7g-cD-m8p">
+                                <rect key="frame" x="67" y="114" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="E7g-cD-m8p" firstAttribute="top" secondItem="yW9-K6-gD4" secondAttribute="top" constant="94" id="2jZ-Q0-ME6"/>
+                            <constraint firstItem="E7g-cD-m8p" firstAttribute="leading" secondItem="yW9-K6-gD4" secondAttribute="leading" constant="67" id="9WA-Bv-y1R"/>
+                            <constraint firstItem="yW9-K6-gD4" firstAttribute="trailing" secondItem="E7g-cD-m8p" secondAttribute="trailing" constant="68" id="DiU-m8-HRO"/>
+                            <constraint firstItem="yW9-K6-gD4" firstAttribute="bottom" secondItem="E7g-cD-m8p" secondAttribute="bottom" constant="376" id="s6r-cs-tcj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yW9-K6-gD4"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="aFC-8U-K5L"/>
+                    <connections>
+                        <outlet property="imageView" destination="E7g-cD-m8p" id="3EO-im-1xc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wZe-U0-Fff" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1641" y="92"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="3mG-eB-P6P">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Kuh-gH-LXy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pbp-aA-Gnc">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="f82-4U-dAc" kind="relationship" relationship="viewControllers" id="WVJ-b6-OBx"/>
+                        <segue destination="XaI-64-fbU" kind="relationship" relationship="viewControllers" id="WUd-gY-Th1"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="bK3-fI-XOF"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rTo-Il-pqL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="953" y="-787"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="pjj-uF-zMp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XaI-64-fbU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="UUp-4S-FIJ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wsR-8B-IXH">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="L64-BY-Vh0" kind="relationship" relationship="rootViewController" id="s0f-nA-xLc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k6X-1J-ltz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="952" y="92.653673163418304"/>
+        </scene>
+    </scenes>
+</document>
